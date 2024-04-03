@@ -1,76 +1,467 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <title>Fresh Fien Podcast</title>
-</head>
-<body>
-    <header><h1>Fresh Fien <lime>Podcast</lime></h1>
-    <nav>
-        <li><a href="#">Home</a></li>
-        <li><a href="#lastEpisode">Episodes</a></li>
-        <li><a href="https://www.youtube.com/@thefreshfienpod">Subscribe</a></li>
-        <li><a href="#contact">Booking</a></li>
-    </nav>
-</header>
-    <main>
-        <div class="backgroundMain"></div>
-        <section class="intro" id="intro">
-            <div class="left">
-                <div class="leftContents">
-                <h2 style="color: #ff6c6c;">Step Into</h2>
-                <h1>The Fresh Fien <br>Podcast</h1>
-                <p>Join the Fresh Fien Podcast for the latest on fashion, lifestyle, music, and sports <br> where trends meet entertainment!</p>
-                <br><button><a href="#">All Episodes</a></button>
-            </div>
-            </div>
-            <div class="right">
-                <img src="images/Fresh Fien BG.png" alt="">
-            </div>
-        </section>
-        <section class="lastEpisode" id="lastEpisode">
-            <div class="top">
-                <h2>Latest Episode</h2>
-            </div>
-            <div class="bottom">
-                <img src="images/ep_cover.png" alt="This is the thumbnail for the fresh fien podcast.">
-                <p>
-                    The Fresh Fiens talk about Kendrick shooting at Drake and Cole, No Diddy! And of course fashion, Listen Here. <br>
-                    <iframe src="https://player.rss.com/ndwr/1420529?theme=dark" title="Season 2 Ep 2 - No Diddy with reps" width="100%" height="120px" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen scrolling="no"><a href="https://rss.com/podcasts/ndwr/1420529">Season 2 Ep 2 - No Diddy with reps</a></iframe>
-                </p>
-            </div>
-        </section>
-        <section class="library" id="library">
-            <h3>Start Listening Today</h3>
-            <h1>Fresh library</h1>
-            <div class="libraryContainer">
-                <div class="episodeContainer" id="episodeContainer">
-                    <img src="images/ep_cover.png" alt="This is an image of the corresponding episodes thumbnail."><br>
-                    <iframe src="https://player.rss.com/ndwr/1420529?theme=dark" title="Season 2 Ep 2 - No Diddy with reps" width="100%" height="150px" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen scrolling="no"><a href="https://rss.com/podcasts/ndwr/1420529">Season 2 Ep 2 - No Diddy with reps</a></iframe>
-                </div>
-                <div class="episodeContainer" id="episodeContainer">
-                    <img src="images/NEW EPISODE COMING SOON!.png" alt="Thumbnail for Coming Soon episodes.">
-                </div>
-                <div class="episodeContainer" id="episodeContainer">
-                    <img src="images/NEW EPISODE COMING SOON!.png" alt="Thumbnail for Coming Soon episodes.">
-                </div>
-            </div>
-        </section>
-        <section class="contact" id="contact">
-            <h1 align="center">Book The Fiens</h1>
-            <form action="mailto:thefreshfienpodcast@yahoo.com" method="post" enctype="text/plain">
-                <label for="subject">Subject:</label><br>
-                <input type="text" id="subject" name="subject"><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-                <input type="submit" value="Send">
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>Created by <a href="https://astroclaretechnology.github.io/" target="_blank">Astro Clare Technology</a> - Fresh Fien Podcast &copy; 2024</p>
-    </footer>
-</body>
-</html>
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    background:black;
+    color: whitesmoke;
+}
+.backgroundMain{
+    height: 95vh;
+    width: 100%;
+    z-index: -1;
+    background:url(/images/mainBG.svg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    opacity: 40%;
+}
+header{
+    height: 5vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header h1{
+    color: #ff6c6c;
+    letter-spacing: 2px;
+}
+header lime{
+    color: rgb(220, 255, 151);
+}
+header nav{
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav li{
+    list-style-type: none;
+}
+header nav li a{
+    color: whitesmoke;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+header nav li a:hover{
+    color: rgb(248, 94, 37);
+    text-decoration:wavy underline 1px rgb(200, 255, 91);
+}
+.intro{
+    height: 95vh;
+    display: flex;
+}
+.intro .left{
+    flex: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+}
+.intro .left h2{
+    font-size: 28px;
+}
+.intro .left h1{
+    font-size: 40px;
+}
+.intro .left p{
+    font-size: 24px;
+    line-height: 30px;
+}
+.intro button{
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: rgb(200, 255, 91);
+
+    border: none;
+    outline: none;
+}
+.intro button a{
+    color: #ff6c6c;
+    font-weight: bold;
+    text-decoration: none;
+}
+.intro button:hover{
+    background-color: rgb(235, 255, 196);
+}
+.intro button a:hover{
+    color: black;
+}
+.intro .right{
+    flex: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.intro .right img{
+    height: 400px;
+    width: auto;
+}
+.lastEpisode{
+    height: 20vh;
+    padding: 20px 0;
+    background-color: rgb(31, 31, 31);
+}
+.lastEpisode .top{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(200, 255, 91);
+    border: solid 1px whitesmoke;
+    width: 10vw;
+    margin: 0 auto;
+}
+.lastEpisode .bottom{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lastEpisode .bottom p{
+    padding: 0 20px;
+    font-size: 18px;
+}
+.lastEpisode .bottom img{
+    height: 155px;
+    width: 150px;
+    background-color: rgb(200, 255, 91);
+    border:solid 1px whitesmoke;
+    color: black;
+}
+.library{
+    height: 90vh;
+    text-align: center;
+}
+.libraryContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.767);
+}
+.library h3, .library h1{
+    background-color: black;
+    font-size: 200%;
+}
+.episodeContainer{
+    border-radius: 50px;
+    border: solid 1px whitesmoke;
+    padding: 20px;
+    height: 500px;
+    width: 375px;
+    background-color: rgba(220, 255, 149, 0.24);
+}
+.episodeContainer img{
+    height:300px;
+    width: auto;
+    background-color: white;
+}
+.contact{
+    height: 60vh;
+    background-color: rgb(13, 22, 11);
+    padding: 60px 0 0 0;
+}
+
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #575757;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    color: #fff;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type="submit"] {
+    background-color: rgb(200, 255, 91);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(31, 44, 4);
+    color: #fff;
+}
+footer{
+    background-color: rgb(46, 63, 13);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer a{
+    color: rgb(51, 235, 51);
+    text-decoration: none;
+}
+@media screen and (max-width:1180px) {
+    *{
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+    body{
+        background:black;
+        color: whitesmoke;
+    }
+    .backgroundMain{
+        height: 95vh;
+        width: auto;
+        z-index: -1;
+        background:url(/images/mainBG.svg);
+        background-size: cover;
+        background-position: center;
+        position: fixed;
+        opacity: 40%;
+    }
+    header{
+        height: 5vh;
+        width: auto;
+        display: block;
+        text-align: center;
+    }
+    header h1{
+        color: #ff6c6c;
+        letter-spacing: 2px;
+    }
+    header lime{
+        color: rgb(220, 255, 151);
+    }
+    header nav{
+        width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+    header nav li{
+        list-style-type: none; 
+    }
+    header nav li a{
+        color: whitesmoke;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+    header nav li a:hover{
+        color: rgb(248, 94, 37);
+        text-decoration:wavy underline 1px rgb(200, 255, 91);
+    }
+    .intro{
+        padding-top: 40px;
+        height: 70vh;
+        display: block;
+    }
+    .intro .left{
+        flex: 0;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        line-height: 50px;
+    }
+    .intro .left h2{
+        font-size: 28px;
+    }
+    .intro .left h1{
+        font-size: 40px;
+    }
+    .intro .left p{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .intro button{
+        padding: 10px 30px;
+        border-radius: 20px;
+        background-color: rgb(200, 255, 91);
+        border: none;
+        outline: none;
+    }
+    .intro button a{
+        color: #ff6c6c;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .intro button:hover{
+        background-color: rgb(235, 255, 196);
+    }
+    .intro button a:hover{
+        color: black;
+    }
+    .intro .right{
+        flex: 50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .intro .right img{
+        height: 150px;
+        width: auto;
+        margin: 0 auto;
+    }
+    .lastEpisode{
+        height: 30vh;
+        padding: 0px 0;
+        background-color: rgb(31, 31, 31);
+    }
+    .lastEpisode .top{
+        color: black;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(200, 255, 91);
+        border: solid 1px whitesmoke;
+        width: auto;
+        margin: 0 auto;
+    }
+    .lastEpisode .bottom{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .lastEpisode iframe{
+        height: 150px;
+    }
+    .lastEpisode .bottom p{
+        padding: 0px;
+        font-size: 18px;
+    }
+    .lastEpisode .bottom img{
+        display: none;
+        height: 155px;
+        width: 150px;
+        background-color: rgb(200, 255, 91);
+        border:solid 1px whitesmoke;
+        color: black;
+    }
+    .library{
+        height: 70vh;
+        text-align: center;
+        overflow-x: hidden;
+    }
+    .libraryContainer{
+        overflow-x: scroll;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: inherit;
+        background-color: rgba(0, 0, 0, 0.767);
+    }
+    .library h3, .library h1{
+        background-color: black;
+        font-size: 200%;
+    }
+    .episodeContainer{
+        border-radius: 20px;
+        border: solid 1px whitesmoke;
+        padding: 20px;
+        height: 350px;
+        width: 375px;
+        background-color: rgba(220, 255, 149, 0.24);
+    }
+    .episodeContainer img{
+        height:180px;
+        width: auto;
+        background-color: white;
+    }
+    .episodeContainer iframe{
+        height:140px;
+        width: auto;
+        background-color: white;
+    }
+    .contact{
+        height: 60vh;
+        background-color: rgb(13, 22, 11);
+    }    
+    form {
+        width: 250px;
+        margin: 0 auto;
+        background-color: #575757;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    label {
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 20px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        resize: vertical;
+    }
+    
+    textarea {
+        height: 150px;
+    }
+    
+    input[type="submit"] {
+        background-color: rgb(200, 255, 91);
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: rgb(31, 44, 4);
+        color: #fff;
+    }
+    footer{
+        background-color: rgb(46, 63, 13);
+        color: white;
+        position: fixed;
+        bottom: 0;
+        height: 3vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+    footer a{
+        color: rgb(51, 235, 51);
+        text-decoration: none;
+    }
+}
