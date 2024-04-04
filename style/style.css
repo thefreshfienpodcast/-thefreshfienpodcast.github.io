@@ -101,8 +101,8 @@ header nav li a:hover{
     width: auto;
 }
 .lastEpisode{
-    height: 20vh;
-    padding: 20px 0;
+    height: 10vh;
+    padding: 0px;
     background-color: rgb(31, 31, 31);
 }
 .lastEpisode .top{
@@ -141,7 +141,7 @@ header nav li a:hover{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: inherit;
+    height: auto;
     background-color: rgba(0, 0, 0, 0.767);
 }
 .library h3, .library h1{
@@ -149,6 +149,7 @@ header nav li a:hover{
     font-size: 200%;
 }
 .episodeContainer{
+    margin: 0 20px;
     border-radius: 50px;
     border: solid 1px whitesmoke;
     padding: 20px;
@@ -246,7 +247,7 @@ footer a{
         opacity: 40%;
     }
     header{
-        height: 5vh;
+        height: 10vh;
         width: auto;
         display: block;
         text-align: center;
@@ -280,8 +281,8 @@ footer a{
         text-decoration:wavy underline 1px rgb(200, 255, 91);
     }
     .intro{
-        padding-top: 40px;
-        height: 60vh;
+        padding-top: 0px;
+        height: 75vh;
         display: block;
     }
     .intro .left{
@@ -290,7 +291,7 @@ footer a{
         text-align: center;
         align-items: center;
         justify-content: center;
-        line-height: 50px;
+        line-height: 40px;
     }
     .intro .left h2{
         font-size: 28px;
@@ -332,8 +333,11 @@ footer a{
         margin: 0 auto;
     }
     .lastEpisode{
-        height: 30vh;
-        padding: 0px 0;
+        height: 25vh;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: rgb(31, 31, 31);
     }
     .lastEpisode .top{
@@ -349,16 +353,17 @@ footer a{
     }
     .lastEpisode .bottom{
         text-align: center;
-        display: flex;
+        display: block;
         align-items: center;
         justify-content: center;
     }
     .lastEpisode iframe{
         height: 150px;
+        width: 375px;
     }
     .lastEpisode .bottom p{
         padding: 0px;
-        font-size: 18px;
+        font-size: 16px;
     }
     .lastEpisode .bottom img{
         display: none;
@@ -369,7 +374,8 @@ footer a{
         color: black;
     }
     .library{
-        height: 70vh;
+        padding: 20px 0;
+        height: 60vh;
         text-align: center;
         overflow-x: hidden;
     }
@@ -378,7 +384,7 @@ footer a{
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        height: inherit;
+        height: 50vh;
         background-color: rgba(0, 0, 0, 0.767);
     }
     .library h3, .library h1{
@@ -408,8 +414,9 @@ footer a{
         background-color: rgb(13, 22, 11);
     }    
     form {
-        width: 250px;
+        width: 350px;
         margin: 0 auto;
+        margin-top: 40px;
         background-color: #575757;
         padding: 20px;
         border-radius: 8px;
